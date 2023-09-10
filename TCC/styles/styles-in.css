@@ -1,0 +1,29 @@
+body{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+h2{
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+.container-button{
+    display: flex;
+    justify-content: space-evenly;
+}
+button{
+    width: 150px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container-button{
+        display: flex;
+        flex-direction: column;
+    }
+    button{
+        margin-bottom: 20px;
+    }
+    .body{
+        background-color: aqua;
+    }
+}
