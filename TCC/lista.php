@@ -1,9 +1,10 @@
 <?php
   include('./processos/protect.php');
   include('./processos/conexao.php');
+  include('./processos/pesquisa.php');
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,6 +34,19 @@
 <div class="lista m-5">
   <h2>Lista de clientes</h2>
   <table class="table table-bg">
+
+  <div class="box-search">
+        <input type="search" class="form-control w-25" placeholder="Pesquisar" id="pesq">
+        <button id="bt1" onclick="searchData()" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+        </button>
+    </div>
+
+
+
+
     <thead>
       <tr>
         <th scope="col">Nome</th>
@@ -48,7 +62,16 @@
       <?php
         $table = $_SESSION['Usuario'];
 
-        $sql = "SELECT id, nome, sobrenome, cpf, tel, email, placa FROM $table";
+;
+        if(!empty($_GET['search']))
+        {
+            $data = $_GET['search'];
+            $sql = "SELECT * FROM $table WHERE nome LIKE '%$data%' or cpf LIKE '%$data%' or email LIKE '%$data%' or placa LIKE '%$data%' ORDER BY id ASC";
+        }
+        else
+        {
+          $sql = "SELECT id, nome, sobrenome, cpf, tel, email, placa FROM $table ORDER BY id ASC";
+        }
         $result = $conn->query($sql);
       
         while ($user_data = mysqli_fetch_assoc($result) ) {
@@ -71,5 +94,7 @@
     </tbody>
   </table>
 </div>  
+
+<script src="./scripts/script_lista.js"></script>
 </body>
 </html>

@@ -4,11 +4,9 @@ if(!isset($_SESSION)){
 }
 
 if(!isset($_SESSION['Usuario'])) {
-    echo '<script>window.location.replace("index.php");</script>';
+    echo '<script>window.location.replace("login.php");</script>';
 
 }
-
-
 
 
 

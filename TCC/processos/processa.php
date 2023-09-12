@@ -47,7 +47,7 @@ if(isset($_POST['n']) || isset($_POST['s']) || isset($_POST['e'])){
         if ($conn->query($insertSql) === TRUE) {
           if ($conn->query($createTableSql) === TRUE) {
             if ($conn->query($createTableSql2) === TRUE){
-              echo '<script>window.location.replace("index.php");</script>';
+              echo '<script>window.location.replace("login.php");</script>';
             }else {
               echo "Error creating table 2: " . $conn->error;
             }
