@@ -15,32 +15,33 @@ include('./processos/conexao.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/styles-login.css">
+    <link rel="stylesheet" href="./styles/styles-logins.css">
     <title>Login</title>
 </head>
 <body>
+
 <div class="main-login">
-    
+    <div classs="btn-cont"><a class="voltar" href="index.html"><img class="back" src="./img/arrow-left.svg" alt="Retornar"></a>
+    </div>
+
     <div class="esquerda-login">
+
     <h1>Bem-Vindo ao gerenciador de estacionamentos online.</h1>
     <img src="./img/estacionamento.svg" class="img-login" alt="estacionameno">
-
-
-
     </div>
 
 
     
     <div class="direita-login">
         <div class="card">
-        <h2 id="t1">Login</h2><br><br><br>
+        <h2 id="t1">Login</h2>
         <form action="login.php" method="post" onsubmit="submitForm(event)">
         <div class="container-sm">
 
                 <div class="textfield">
                     <label for="usuario">Usuário</label>
                     <input type="text" class="form-control" name="n" placeholder="Usuário">
-                </div><br><br>
+                </div>
 
 
 
@@ -50,7 +51,7 @@ include('./processos/conexao.php');
                     <input type="password" class="form-control" name="s" id="s" placeholder="Senha">
                     <button type="button" id="bt3" class="btn btn-secondary"  onclick="mostrarSenha()"><img class="img1" id="img1" src="./img/olho1.svg" ></img></button>
                     </div>
-                </div><br><br>
+                </div>
 
            
                 <div id="div"></div><br>

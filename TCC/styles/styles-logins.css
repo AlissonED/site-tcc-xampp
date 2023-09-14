@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+}
+body * {
+    box-sizing: border-box;
+}
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background:  rgb(152, 182, 236);
+    display : flex;
+}
+.direita-login {
+    width: 50vw;
+    height: auto;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+.direita-login h2{
+    margin-bottom: 80px;
+}
+.esquerda-login {
+    width: 50vw;
+    height: auto;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.card{
+    width: 60%;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px 30px;
+    background: rgb(86, 149, 243);
+    border-radius: 10px;
+}
+.textfield{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+#bt1{
+    width: 100%;
+    height: 40px;
+}
+#bt2{
+    width: 100%;
+    height: 40px;
+}
+#bt3{
+    width: 50px;
+    height: 40px;
+}
+#img1{
+    width: 20px;
+    height: 20px;
+}
+#div{
+    align-items: center;
+    justify-content: center;
+    color: red;
+}
+.img-login{
+    width: 35vw;
+}
+.voltar{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.back{
+    visibility: visible;
+    width: 40px;
+    height: 35px;    
+    margin-top: 20px;
+
+}
+
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .esquerda-login > h1{
+        display: none;
+    }
+    .esquerda-login{
+        width: 100%;
+        height: 25%;
+    }
+    .direita-login{
+        width: 100%;
+        height: 75%;
+    }
+    .direita-login h2{
+        margin-bottom: 30px;
+    }
+    .back{
+        visibility: visible; 
+        margin-top: 5px;
+        width: 30px;
+    }
+    .textfield{
+        margin-bottom: 0;
+    }
+    .img-login{
+        height: 100%;
+        width: auto;
+    }
+}
