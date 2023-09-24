@@ -1,0 +1,114 @@
+.header-container {
+    width: 100vw;
+    height: 8vh;
+    background-color: #545656;
+    display: flex;
+    font-size: 10pt;
+  }
+  
+  .menu {
+    width: 60%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+  
+  .menu li {
+    width: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  
+  }
+  
+  .menu li a:hover {
+    background-color: #444;
+    color: #ccc;
+  }
+  
+  .logout {
+    width: 40%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1vw;
+    justify-self: flex-end;
+  }
+  
+  .logout li {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logout li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #A32C2C;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout li a:hover {
+    background-color: #7f1f1f;
+    color: #ccc;
+  }
+.table{
+    margin:0;
+    padding:0;
+    margin-top: 5%;
+}
+.table-bg{
+    background: rgba(0, 0, 0, 0.2);
+}
+.lista{
+    text-align: center;
+}
+.btn{
+    align-items: center;
+    justify-content: center;
+}
+.barraPesquisa{
+    display: flex;
+    justify-content: center;
+}
+#pesq{
+  
+    margin-right: 2px;
+}
+.detalhes .info {
+    display: none;
+}
+.box-search{
+  margin: 0;
+  padding: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Estilos para o botão de hamburguer */
+.detalhes .hamburguer {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos para o botão de hamburguer ativo */
+.detalhes.active .info {
+    display: block;
+}
+
