@@ -1,7 +1,6 @@
 <?php
   include('./processos/protect.php');
   include('./processos/conexao.php');
-  include('./processos/pesquisa.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
